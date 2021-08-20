@@ -203,7 +203,8 @@ section {
   color: transparent;
 }
 .section__about {
-  background-color: #007991;
+  background: url('./assets/cyberpunkBg.webp') center center no-repeat;
+  background-size: cover;
   min-height: 100vh;
 }
 .section__home h2 {
@@ -302,6 +303,9 @@ footer {
   .navigation__item {
     margin-top: 20px;
     z-index: 1;
+  }
+  .navigation__item a {
+    color: black;
   }
   a:hover {
     cursor: pointer;
