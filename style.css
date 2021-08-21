@@ -194,13 +194,29 @@ section {
 .section__home {
   background-color: #353535;
   min-height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
 }
+.section__text {
+  color: white;
+}
+.section__home video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .section__home h1 {
   background: linear-gradient(to right top, #ffd300, #2cd4e0);
-  font-size: 6rem;
+  font-size: 300%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  position: absolute;
 }
 .section__about {
   background: url('./assets/cyberpunkBg.webp') center center no-repeat;
