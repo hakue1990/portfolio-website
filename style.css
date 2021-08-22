@@ -41,12 +41,7 @@ nav.navigation {
   position: fixed;
   transition: background 0.3s ease;
 }
-nav.sticky {
-  background-color: #ffd300;
-}
-nav.sticky .navigation__item a {
-  color: black;
-}
+
 .logo img {
   height: 140px;
 }
@@ -113,7 +108,7 @@ nav.sticky .navigation__item a {
   display: inline-block;
   width: 24px;
   height: 2px;
-  background-color: black;
+  background-color: white;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -127,7 +122,7 @@ nav.sticky .navigation__item a {
   width: 100%;
   display: inline-block;
   height: 2px;
-  background-color: black;
+  background-color: white;
   transition: transform 0.3s ease-in;
 }
 
@@ -139,7 +134,7 @@ nav.sticky .navigation__item a {
   width: 100%;
   display: inline-block;
   height: 2px;
-  background-color: black;
+  background-color: white;
   transition: transform 0.3s ease-in;
 }
 
@@ -167,15 +162,7 @@ nav.sticky .navigation__item a {
   width: 10rem;
   border-radius: 50%;
 }
-.scroll {
-  position: absolute;
-  bottom: 45px;
-}
-img.scroll {
-  width: 4rem;
-  transform: translateY(-30px);
-  animation: scroll_down 1s infinite alternate-reverse;
-}
+
 .app__container {
   scroll-snap-type: y mandatory;
   height: 100vh;
@@ -196,11 +183,13 @@ section {
   min-height: 100vh;
   color: white;
   display: flex;
-  justify-content: center;
+  align-items: flex-start;
 }
 .section__text {
   color: white;
   z-index: 1;
+
+  padding-left: 80px;
 }
 .section__text h2 {
   font-size: 5em;
@@ -322,7 +311,7 @@ footer {
     left: 0;
     height: 100vh;
     width: 100%;
-    background-color: #ffd300;
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -336,7 +325,7 @@ footer {
     z-index: 1;
   }
   .navigation__item a {
-    color: black;
+    color: white;
   }
   a:hover {
     cursor: pointer;
@@ -344,8 +333,18 @@ footer {
   .navigation--active {
     transform: translateY(0);
   }
+  .section__text h2 {
+    font-size: 4em;
+    font-weight: 800;
+  }
+  .section__text h3 {
+    font-size: 3em;
+    font-weight: 800;
+  }
   .section__text {
-    text-align: center;
+    /* background-color: red; */
+    width: 100%;
+    padding-right: 20px;
   }
 }
 
