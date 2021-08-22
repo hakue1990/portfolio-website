@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300;500;700&display=swap");
 
 *,
 *::before,
@@ -25,7 +25,7 @@
 body {
   width: 100%;
   height: 100vh;
-  font-family: 'Advent Pro', sans-serif;
+  font-family: "Advent Pro", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -37,7 +37,7 @@ nav.navigation {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  font-family: 'Advent Pro', sans-serif;
+  font-family: "Advent Pro", sans-serif;
   position: fixed;
   transition: background 0.3s ease;
 }
@@ -71,7 +71,7 @@ nav.sticky .navigation__item a {
   display: inline-block;
 }
 .navigation__item a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 2px;
@@ -123,7 +123,7 @@ nav.sticky .navigation__item a {
   position: absolute;
   left: 0;
   top: -5px;
-  content: '';
+  content: "";
   width: 100%;
   display: inline-block;
   height: 2px;
@@ -135,7 +135,7 @@ nav.sticky .navigation__item a {
   position: absolute;
   left: 0;
   top: 5px;
-  content: '';
+  content: "";
   width: 100%;
   display: inline-block;
   height: 2px;
@@ -200,7 +200,33 @@ section {
 }
 .section__text {
   color: white;
+  z-index: 1;
 }
+.section__text h2 {
+  font-size: 5em;
+  font-weight: 800;
+}
+.section__text h3 {
+  font-size: 3em;
+  text-transform: uppercase;
+}
+.section__text p {
+  width: 500px;
+  padding: 15px;
+}
+.link {
+  display: block;
+  background-color: #3a86ff;
+  width: 100px;
+  height: 30px;
+  border-radius: 2em;
+  text-align: center;
+  line-height: 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
 .section__home video {
   position: absolute;
   top: 0;
@@ -209,26 +235,18 @@ section {
   height: 100%;
   object-fit: cover;
 }
-
-.section__home h1 {
-  background: linear-gradient(to right top, #ffd300, #2cd4e0);
-  font-size: 300%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.overlay {
+  width: 100%;
+  height: 100%;
   position: absolute;
+  mix-blend-mode: overlay;
+  background-color: #8338ec;
 }
+
 .section__about {
-  background: url('./assets/cyberpunkBg.webp') center center no-repeat;
+  background: url("./assets/cyberpunkBg.webp") center center no-repeat;
   background-size: cover;
   min-height: 100vh;
-}
-.section__home h2 {
-  font-size: 3rem;
-  background: linear-gradient(to left bottom, #2cd4e0, #ffd300);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
 }
 
 .section__portfolio {
@@ -251,6 +269,7 @@ footer {
   flex-direction: column;
   align-items: center;
   position: relative;
+  z-index: -1;
 }
 .madeby {
   position: absolute;
@@ -303,11 +322,6 @@ footer {
     left: 0;
     height: 100vh;
     width: 100%;
-    /*background: linear-gradient(
-      to right top,
-      rgba(255, 255, 255, 0.3),
-      rgba(255, 255, 255, 0.7)
-    );*/
     background-color: #ffd300;
     display: flex;
     flex-direction: column;
@@ -315,6 +329,7 @@ footer {
     justify-content: center;
     transform: translateY(-100%);
     transition: transform 0.3s 0.3s ease-in;
+    /* z-index: 2; */
   }
   .navigation__item {
     margin-top: 20px;
@@ -328,6 +343,9 @@ footer {
   }
   .navigation--active {
     transform: translateY(0);
+  }
+  .section__text {
+    text-align: center;
   }
 }
 
