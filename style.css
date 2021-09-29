@@ -251,6 +251,72 @@ section {
   background-color: #70d6ff;
   height: 85vh;
 }
+
+.contact-form {
+  background-color: #fff;
+  padding: 20px;
+  width: 500px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.input-box {
+  width: 300px;
+  height: 40px;
+  position: relative;
+}
+.input-box input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.input-box label {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+.input-box label::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: -1px;
+  transform: translateX(-100%);
+  border-bottom: 4px solid red;
+  transition: all 0.4s ease;
+  z-index: 2;
+}
+.input-content {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+.contact-form input:focus + .input-label .input-content,
+.contact-form input:valid + .input-label .input-content {
+  transform: translateY(-150%);
+  font-size: 13px;
+  color: red;
+}
+.contact-form input:focus + .input-label::after,
+.contact-form input:valid + .input-label::after {
+  transform: translateX(0%);
+}
+
 footer {
   height: 15vh;
   display: flex;
@@ -269,7 +335,6 @@ footer {
   right: 0;
   bottom: 0;
   margin: 7px 10px;
-  /* background-color: pink; */
 }
 .footer__icons {
   width: 220px;
