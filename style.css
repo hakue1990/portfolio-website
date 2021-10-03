@@ -259,14 +259,20 @@ section {
   height: 600px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  flex-direction: column;
 }
 
 .input-box {
   width: 300px;
-  height: 40px;
+  height: 45px;
   position: relative;
+  margin: 10px;
+}
+.text-box {
+  /* background-color: pink; */
+  height: 200px;
 }
 .input-box input {
   position: absolute;
@@ -296,7 +302,7 @@ section {
   left: 0;
   bottom: -1px;
   transform: translateX(-100%);
-  border-bottom: 4px solid red;
+  border-bottom: 4px solid black;
   transition: all 0.4s ease;
   z-index: 2;
 }
@@ -310,13 +316,36 @@ section {
 .contact-form input:valid + .input-label .input-content {
   transform: translateY(-150%);
   font-size: 13px;
-  color: red;
+  color: black;
+}
+.contact-form input:focus + .input-label-text .input-content,
+.contact-form input:valid + .input-label-text .input-content {
+  transform: translateY(-650%);
+  font-size: 13px;
+  color: black;
 }
 .contact-form input:focus + .input-label::after,
 .contact-form input:valid + .input-label::after {
   transform: translateX(0%);
 }
-
+.contact-form input:focus + .input-label-text::after,
+.contact-form input:valid + .input-label-text::after {
+  transform: translateX(0%);
+}
+.form__button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: none;
+  border: 2px solid black;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+.form__button:hover {
+  background-color: aqua;
+  cursor: pointer;
+}
 footer {
   height: 15vh;
   display: flex;
